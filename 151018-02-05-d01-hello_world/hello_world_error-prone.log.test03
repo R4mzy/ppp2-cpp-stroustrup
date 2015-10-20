@@ -1,0 +1,655 @@
+r4mzy@ARCH42 151018-02-05-d01-hello_world]$ g++ -std=c++11 -o hello_world_error-prone.out hello_world_error-prone.cpp 
+hello_world_error-prone.cpp:9:10: warning: missing terminating " character
+  cout << "Hello, World!\n;
+          ^
+hello_world_error-prone.cpp:9:2: error: missing terminating " character
+  cout << "Hello, World!\n;
+  ^
+hello_world_error-prone.cpp: In function ‘int main()’:
+hello_world_error-prone.cpp:9:7: error: no match for ‘operator<<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘void’)
+  cout << "Hello, World!\n;
+       ^
+In file included from /usr/include/c++/5.2.0/iostream:39:0,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/ostream:108:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^
+/usr/include/c++/5.2.0/ostream:108:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/5.2.0/ostream:117:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^
+/usr/include/c++/5.2.0/ostream:117:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/5.2.0/ostream:127:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^
+/usr/include/c++/5.2.0/ostream:127:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/5.2.0/ostream:166:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^
+/usr/include/c++/5.2.0/ostream:166:7: note:   no known conversion for argument 1 from ‘void’ to ‘long int’
+/usr/include/c++/5.2.0/ostream:170:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^
+/usr/include/c++/5.2.0/ostream:170:7: note:   no known conversion for argument 1 from ‘void’ to ‘long unsigned int’
+/usr/include/c++/5.2.0/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^
+/usr/include/c++/5.2.0/ostream:174:7: note:   no known conversion for argument 1 from ‘void’ to ‘bool’
+In file included from /usr/include/c++/5.2.0/ostream:638:0,
+                 from /usr/include/c++/5.2.0/iostream:39,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/ostream.tcc:91:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/5.2.0/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘void’ to ‘short int’
+In file included from /usr/include/c++/5.2.0/iostream:39:0,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/ostream:181:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^
+/usr/include/c++/5.2.0/ostream:181:7: note:   no known conversion for argument 1 from ‘void’ to ‘short unsigned int’
+In file included from /usr/include/c++/5.2.0/ostream:638:0,
+                 from /usr/include/c++/5.2.0/iostream:39,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/ostream.tcc:105:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/5.2.0/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘void’ to ‘int’
+In file included from /usr/include/c++/5.2.0/iostream:39:0,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/ostream:192:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^
+/usr/include/c++/5.2.0/ostream:192:7: note:   no known conversion for argument 1 from ‘void’ to ‘unsigned int’
+/usr/include/c++/5.2.0/ostream:201:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^
+/usr/include/c++/5.2.0/ostream:201:7: note:   no known conversion for argument 1 from ‘void’ to ‘long long int’
+/usr/include/c++/5.2.0/ostream:205:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^
+/usr/include/c++/5.2.0/ostream:205:7: note:   no known conversion for argument 1 from ‘void’ to ‘long long unsigned int’
+/usr/include/c++/5.2.0/ostream:220:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^
+/usr/include/c++/5.2.0/ostream:220:7: note:   no known conversion for argument 1 from ‘void’ to ‘double’
+/usr/include/c++/5.2.0/ostream:224:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^
+/usr/include/c++/5.2.0/ostream:224:7: note:   no known conversion for argument 1 from ‘void’ to ‘float’
+/usr/include/c++/5.2.0/ostream:232:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^
+/usr/include/c++/5.2.0/ostream:232:7: note:   no known conversion for argument 1 from ‘void’ to ‘long double’
+/usr/include/c++/5.2.0/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^
+/usr/include/c++/5.2.0/ostream:245:7: note:   no known conversion for argument 1 from ‘void’ to ‘const void*’
+In file included from /usr/include/c++/5.2.0/ostream:638:0,
+                 from /usr/include/c++/5.2.0/iostream:39,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/ostream.tcc:119:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/5.2.0/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /usr/include/c++/5.2.0/string:52:0,
+                 from /usr/include/c++/5.2.0/bits/locale_classes.h:40,
+                 from /usr/include/c++/5.2.0/bits/ios_base.h:41,
+                 from /usr/include/c++/5.2.0/ios:42,
+                 from /usr/include/c++/5.2.0/ostream:38,
+                 from /usr/include/c++/5.2.0/iostream:39,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/basic_string.h:5170:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/basic_string.h:5170:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/bits/ios_base.h:46:0,
+                 from /usr/include/c++/5.2.0/ios:42,
+                 from /usr/include/c++/5.2.0/ostream:38,
+                 from /usr/include/c++/5.2.0/iostream:39,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/system_error:209:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     ^
+/usr/include/c++/5.2.0/system_error:209:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘const std::error_code&’
+  keep_window_open();
+                  ^
+In file included from /usr/include/c++/5.2.0/iostream:39:0,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/usr/include/c++/5.2.0/ostream:497:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘void’)
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/iostream:39:0,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/5.2.0/ostream:502:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘char’
+  keep_window_open();
+                  ^
+In file included from /usr/include/c++/5.2.0/iostream:39:0,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/5.2.0/ostream:508:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘char’
+  keep_window_open();
+                  ^
+In file included from /usr/include/c++/5.2.0/iostream:39:0,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/usr/include/c++/5.2.0/ostream:514:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘signed char’
+  keep_window_open();
+                  ^
+In file included from /usr/include/c++/5.2.0/iostream:39:0,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/usr/include/c++/5.2.0/ostream:519:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘unsigned char’
+  keep_window_open();
+                  ^
+In file included from /usr/include/c++/5.2.0/iostream:39:0,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/usr/include/c++/5.2.0/ostream:539:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const _CharT*’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/ostream:638:0,
+                 from /usr/include/c++/5.2.0/iostream:39,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/5.2.0/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘const char*’
+  keep_window_open();
+                  ^
+In file included from /usr/include/c++/5.2.0/iostream:39:0,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/5.2.0/ostream:556:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘const char*’
+  keep_window_open();
+                  ^
+In file included from /usr/include/c++/5.2.0/iostream:39:0,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/usr/include/c++/5.2.0/ostream:569:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘const signed char*’
+  keep_window_open();
+                  ^
+In file included from /usr/include/c++/5.2.0/iostream:39:0,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/usr/include/c++/5.2.0/ostream:574:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘const unsigned char*’
+  keep_window_open();
+                  ^
+In file included from /usr/include/c++/5.2.0/iostream:39:0,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/ostream:628:5: note: candidate: template<class _CharT, class _Traits, class _Tp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&)
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+/usr/include/c++/5.2.0/ostream:628:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/5.2.0/ostream: In substitution of ‘template<class _CharT, class _Traits, class _Tp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = void]’:
+hello_world_error-prone.cpp:10:19:   required from here
+/usr/include/c++/5.2.0/ostream:628:5: error: forming reference to void
+In file included from std_lib_facilities.h:29:0,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/iomanip:79:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+     ^
+/usr/include/c++/5.2.0/iomanip:79:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘std::_Resetiosflags’
+  keep_window_open();
+                  ^
+In file included from std_lib_facilities.h:29:0,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/iomanip:109:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+     ^
+/usr/include/c++/5.2.0/iomanip:109:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘std::_Setiosflags’
+  keep_window_open();
+                  ^
+In file included from std_lib_facilities.h:29:0,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/iomanip:143:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+     ^
+/usr/include/c++/5.2.0/iomanip:143:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘std::_Setbase’
+  keep_window_open();
+                  ^
+In file included from std_lib_facilities.h:29:0,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/iomanip:178:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+     ^
+/usr/include/c++/5.2.0/iomanip:178:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘std::_Setfill<_CharT>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from std_lib_facilities.h:29:0,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/iomanip:208:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+     ^
+/usr/include/c++/5.2.0/iomanip:208:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘std::_Setprecision’
+  keep_window_open();
+                  ^
+In file included from std_lib_facilities.h:29:0,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/iomanip:238:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+     ^
+/usr/include/c++/5.2.0/iomanip:238:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘std::_Setw’
+  keep_window_open();
+                  ^
+In file included from std_lib_facilities.h:29:0,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/iomanip:311:5: note: candidate: template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+     ^
+/usr/include/c++/5.2.0/iomanip:311:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘std::_Put_money<_MoneyT>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from std_lib_facilities.h:29:0,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/iomanip:363:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+     ^
+/usr/include/c++/5.2.0/iomanip:363:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘std::_Put_time<_CharT>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:49:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.h:1276:5: note: candidate: template<class _RandomNumberEngine, long unsigned int __w, class _UIntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.h:1276:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:477:5: note: candidate: template<class _UIntType1, long unsigned int __w1, long unsigned int __n1, long unsigned int __m1, long unsigned int __r1, _UIntType1 __a1, long unsigned int __u1, _UIntType1 __d1, long unsigned int __s1, _UIntType1 __b1, long unsigned int __t1, _UIntType1 __c1, long unsigned int __l1, _UIntType1 __f1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:477:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:1029:5: note: candidate: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::uniform_int_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:1029:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::uniform_int_distribution<_IntType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:1088:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::uniform_real_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:1088:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::uniform_real_distribution<_IntType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:2275:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::cauchy_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:2275:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::cauchy_distribution<_RealType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:1150:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::bernoulli_distribution&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:1150:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:18: note:   cannot convert ‘keep_window_open()’ (type ‘void’) to type ‘const std::bernoulli_distribution&’
+  keep_window_open();
+                  ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:2050:5: note: candidate: template<class _RealType1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::normal_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:2050:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::normal_distribution<_RealType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:1232:5: note: candidate: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::geometric_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:1232:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::geometric_distribution<_IntType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:2596:5: note: candidate: template<class _RealType1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::gamma_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:2596:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::gamma_distribution<_RealType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:1883:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::exponential_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:1883:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::exponential_distribution<_RealType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:2674:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::weibull_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:2674:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::weibull_distribution<_RealType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:2750:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::extreme_value_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:2750:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::extreme_value_distribution<_RealType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:156:5: note: candidate: template<class _UIntType, _UIntType __a, _UIntType __c, _UIntType __m, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::linear_congruential_engine<_UIntType, __a, __c, __m>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:156:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::linear_congruential_engine<_UIntType, __a, __c, __m>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:632:5: note: candidate: template<class _UIntType, long unsigned int __w, long unsigned int __s, long unsigned int __r, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:632:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:702:5: note: candidate: template<class _RandomNumberEngine, long unsigned int __p, long unsigned int __r, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::discard_block_engine<_RandomNumberEngine, __p, __r>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:702:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::discard_block_engine<_RandomNumberEngine, __p, __r>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:831:5: note: candidate: template<class _RandomNumberEngine, long unsigned int __k, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::shuffle_order_engine<_RandomNumberEngine, __k>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:831:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::shuffle_order_engine<_RandomNumberEngine, __k>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:1347:5: note: candidate: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::negative_binomial_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:1347:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::negative_binomial_distribution<_IntType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:1552:5: note: candidate: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::poisson_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:1552:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::poisson_distribution<_IntType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:1819:5: note: candidate: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::binomial_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:1819:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::binomial_distribution<_IntType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:2115:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::lognormal_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:2115:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::lognormal_distribution<_RealType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:2188:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::chi_squared_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:2188:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::chi_squared_distribution<_RealType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:2352:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::fisher_f_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:2352:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::fisher_f_distribution<_RealType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:2427:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::student_t_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:2427:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::student_t_distribution<_RealType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:2886:5: note: candidate: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::discrete_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:2886:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::discrete_distribution<_IntType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:3096:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::piecewise_constant_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:3096:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::piecewise_constant_distribution<_RealType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/random:51:0,
+                 from /usr/include/c++/5.2.0/bits/stl_algo.h:66,
+                 from /usr/include/c++/5.2.0/algorithm:62,
+                 from std_lib_facilities.h:39,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/random.tcc:3312:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::piecewise_linear_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/random.tcc:3312:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::piecewise_linear_distribution<_RealType>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/regex:39:0,
+                 from std_lib_facilities.h:41,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bitset:1532:5: note: candidate: template<class _CharT, class _Traits, long unsigned int _Nb> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::bitset<_Nb>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bitset:1532:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::bitset<_Nb>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/memory:82:0,
+                 from /usr/include/c++/5.2.0/regex:46,
+                 from std_lib_facilities.h:41,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/shared_ptr.h:66:5: note: candidate: template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)
+     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/shared_ptr.h:66:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::__shared_ptr<_Tp, _Lp>’ and ‘void’
+  keep_window_open();
+                   ^
+In file included from /usr/include/c++/5.2.0/regex:61:0,
+                 from std_lib_facilities.h:41,
+                 from hello_world_error-prone.cpp:6:
+/usr/include/c++/5.2.0/bits/regex.h:1480:5: note: candidate: template<class _Ch_type, class _Ch_traits, class _Bi_iter> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::sub_match<_Bi_iter>&)
+     operator<<(basic_ostream<_Ch_type, _Ch_traits>& __os,
+     ^
+/usr/include/c++/5.2.0/bits/regex.h:1480:5: note:   template argument deduction/substitution failed:
+hello_world_error-prone.cpp:10:19: note:   mismatched types ‘const std::sub_match<_Bi_iter>’ and ‘void’
+  keep_window_open();
+                   ^
+

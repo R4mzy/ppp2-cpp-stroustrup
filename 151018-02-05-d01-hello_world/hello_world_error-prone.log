@@ -26,4 +26,17 @@ compilation terminated.
 * therefor stopping compilation
 
 *****
+* console output for test 03 - partial
+*****
 
+r4mzy@ARCH42 151018-02-05-d01-hello_world]$ g++ -std=c++11 -o hello_world_error-prone.out hello_world_error-prone.cpp
+hello_world_error-prone.cpp:9:10: warning: missing terminating " character
+  cout << "Hello, World!\n;
+          ^
+
+* the very first message is the most immediately helpful, clearly pointing out the missing termination of the string
+* regardless, compiler continues after this point and seems to devolve into a cascading madness of further errors as it tries to compile something
+* it looks like it is trying to pipe everything from the start of the string to EOF to cout
+* I included the rest of the (many) messages logged to the console in a separate log file, hello_world_error-prone.log.test03
+
+*****
