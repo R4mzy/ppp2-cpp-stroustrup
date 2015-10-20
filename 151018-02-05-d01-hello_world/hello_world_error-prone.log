@@ -1,0 +1,18 @@
+*****
+* console output for test 01
+*****
+
+[r4mzy@ARCH42 151018-02-05-d01-hello_world]$ g++ -std=c++11 -o hello_world_error-prone.out hello_world_error-prone.cpp 
+hello_world_error-prone.cpp: In function ‘int main()’:
+hello_world_error-prone.cpp:7:2: error: ‘cout’ was not declared in this scope
+  cout << "Hello, World!\n";
+  ^
+hello_world_error-prone.cpp:8:19: error: ‘keep_window_open’ was not declared in this scope
+  keep_window_open();
+                   ^
+* can see error is given as "file:line:char" followed by the problematic code element and then followed by the actual line
+* in this case, functions I am calling ( cout() and keep_window_open() ) are defined in std_lib_facilities.h which, as far as the compiler was
+* concerned, was not included in the source so there's nothing for it to reference how those functions work or what they do...
+
+*****
+
