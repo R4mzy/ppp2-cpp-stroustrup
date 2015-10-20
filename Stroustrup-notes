@@ -1,0 +1,11 @@
+151020 2256
+left off having completed test03 of intentional source/compiler errors for hello_world drill
+todo: continue error testing and checking how the compiler logs info of those errors to console for debug practice, but also get on with things
+	'cause this debug stuff is dull.
+remember: git command sequence for adding modified files, then committing the changes, then pushing the changes to online repo:
+	git add <dir>	: where <dir> is the Stroustrup directory, ie. ~/Stroustrup:$ git add .
+	git commit	: you'll get a vi prompt to provide a message for the commit, or add switch -m "comment"
+	git push	: sends modifications to the repo - you can do multiple adds and commits while you work and just do one push at the end.
+
+	git pull	: syncs changes from the online repo to the local machine's repo, for when you actually work from another system and come
+				back to this one.
