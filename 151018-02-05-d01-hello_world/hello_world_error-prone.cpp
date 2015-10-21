@@ -7,11 +7,12 @@
 // test05 - use only one < for directing the "input" for cout - one might expect this to make cout want to "replace" the console? at least if
 //		writing a file that might be the case (ie. < is replace where << would be append)
 // test06 - using a single quote ' rather than double " to define the string
+// test07 - not terminating the hellow world string with a semi-colon
 
 #include "std_lib_facilities.h"
 
 int main() {
-	cout << 'Hello, World!\n';
+	cout << "Hello, World!\n"
 	keep_window_open();
 	return 0;
 }
