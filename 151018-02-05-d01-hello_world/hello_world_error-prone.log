@@ -40,3 +40,16 @@ hello_world_error-prone.cpp:9:10: warning: missing terminating " character
 * I included the rest of the (many) messages logged to the console in a separate log file, hello_world_error-prone.log.test03
 
 *****
+* console output for test 04
+*****
+
+[r4mzy@ARCH42 151018-02-05-d01-hello_world]$ g++ -std=c++11 -o hello_world_error-prone.out hello_world_error-prone.cpp
+hello_world_error-prone.cpp:10:1: error: ‘integer’ does not name a type
+ integer main() {
+ ^
+
+* seems fairly specific, indicating that "integer" isn't an understood function (or function result) type
+* in this case we should use "int" which specifies the expected return type of the function (as far as I know) is an integer but c++ requires 
+* use of the abbreviated form "int"
+
+*****
