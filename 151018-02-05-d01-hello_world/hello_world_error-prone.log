@@ -74,3 +74,18 @@ In file included from /usr/include/c++/5.2.0/bits/stl_algobase.h:64:0,
 * once again, the first error as above is most useful in immediate debugging with "no match for 'operator<'" making it pretty clear it didn't know
 * what the single < symbol was for. it goes on to list the files it checked to see if such an operator was defined in any of them (so I imagine 
 * you could define what such an operator symbol might denote...)
+
+*****
+* console output for test 06
+*****
+
+[r4mzy@ARCH42 151018-02-05-d01-hello_world]$ g++ -std=c++11 -o hello_world_error-prone.out hello_world_error-prone.cpp
+hello_world_error-prone.cpp:14:10: warning: character constant too long for its type
+  cout << 'Hello, World!\n';
+          ^
+
+* short output - it points out the problem character nicely but I don't really understand the error/warning. i'm not certain what "character 
+* constant" refers to and should research that.
+* did some googling, and it seems using single quotes (') is used for "character literals" or some such things which seem to convert letters into 
+* decimal numbers or something. understanding this is deeper in the rabbit whole than I think is in scope at this point and will probably come
+* later.
