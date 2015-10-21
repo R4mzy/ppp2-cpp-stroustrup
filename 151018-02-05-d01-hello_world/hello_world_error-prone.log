@@ -89,3 +89,17 @@ hello_world_error-prone.cpp:14:10: warning: character constant too long for its 
 * did some googling, and it seems using single quotes (') is used for "character literals" or some such things which seem to convert letters into 
 * decimal numbers or something. understanding this is deeper in the rabbit whole than I think is in scope at this point and will probably come
 * later.
+
+*****
+* console output for test 07
+*****
+
+[r4mzy@ARCH42 151018-02-05-d01-hello_world]$ g++ -std=c++11 -o hello_world_error-prone.out hello_world_error-prone.cpp
+hello_world_error-prone.cpp: In function ‘int main()’:
+hello_world_error-prone.cpp:16:2: error: expected ‘;’ before ‘keep_window_open’
+  keep_window_open();
+  ^
+
+* well this damn near as obvious as it gets - error clearly states the compiler was expecting a semi-colon before the next line...
+
+*****
