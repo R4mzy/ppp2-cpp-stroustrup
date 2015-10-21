@@ -29,7 +29,7 @@ compilation terminated.
 * console output for test 03 - partial
 *****
 
-r4mzy@ARCH42 151018-02-05-d01-hello_world]$ g++ -std=c++11 -o hello_world_error-prone.out hello_world_error-prone.cpp
+[r4mzy@ARCH42 151018-02-05-d01-hello_world]$ g++ -std=c++11 -o hello_world_error-prone.out hello_world_error-prone.cpp
 hello_world_error-prone.cpp:9:10: warning: missing terminating " character
   cout << "Hello, World!\n;
           ^
@@ -53,3 +53,24 @@ hello_world_error-prone.cpp:10:1: error: ‘integer’ does not name a type
 * use of the abbreviated form "int"
 
 *****
+* console output for test 05 - partial
+*****
+
+[r4mzy@ARCH42 151018-02-05-d01-hello_world]$ g++ -std=c++11 -o hello_world_error-prone.out hello_world_error-prone.cpp
+hello_world_error-prone.cpp: In function ‘int main()’:
+hello_world_error-prone.cpp:13:7: error: no match for ‘operator<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘const char [15]’)
+  cout < "Hello, World!\n";
+       ^
+In file included from /usr/include/c++/5.2.0/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/5.2.0/bits/char_traits.h:39,
+                 from /usr/include/c++/5.2.0/ios:40,
+                 from /usr/include/c++/5.2.0/ostream:38,
+                 from /usr/include/c++/5.2.0/iostream:39,
+                 from std_lib_facilities.h:28,
+                 from hello_world_error-prone.cpp:10:
+
+* large amount of compiler error was logged, see hello_world_error-prone.log.test05 for the whole thing - looks like the compiler really doesn't like
+* it when you screw with the expected inputs and outputs
+* once again, the first error as above is most useful in immediate debugging with "no match for 'operator<'" making it pretty clear it didn't know
+* what the single < symbol was for. it goes on to list the files it checked to see if such an operator was defined in any of them (so I imagine 
+* you could define what such an operator symbol might denote...)
