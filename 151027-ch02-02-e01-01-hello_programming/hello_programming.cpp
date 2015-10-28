@@ -6,7 +6,8 @@ int main() //C++ programs start by executing the function main
 // output line1 "Hello, programming!"
 // output line2 "Here we go!"
 cout << "Hello, programming! \nHere we go! \n";
-keep_window_open(); // wait for a character to be entered -Windows-peculiarity
+cout << "\n Press <Enter> to continue... \n";
+getchar();
 return 0;
 }
 
@@ -18,3 +19,6 @@ return 0;
 // output using "cout << "Hello, programming! \nHere we go! \n";" is nicely formatted
 // I'd like to figure out how to have the program exit on just any key press, rather than enter a key and <enter>
 // whatever that solution is, it should be compatible with Windows too.
+
+// 3rd build
+// replacing keep_window_open() with a cout + getchar() combo - see github issue #3 notes and ch02-01 hello_world_practice.cpp comments for why

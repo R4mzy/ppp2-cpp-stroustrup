@@ -23,7 +23,11 @@
 int main() //C++ programs start by executing the function main
 {
 cout << "Hello, World!\n"; // output "Hello, World!"
-keep_window_open(); // wait for a character to be entered -Windows-peculiarity
+
+// replacing keep_window_open() with getchar() - see more notes in hello_world_practice.cpp and the github issue notes
+cout << "\n Press <Enter> to continue... \n";
+getchar();
+
 return 0;
 }
 

@@ -9,8 +9,9 @@ cout <<	"Starting from your seated position at the dining room table, you are fa
 // painfully detailed instructions next
 
 
-// keep the window open...
-keep_window_open();
+// replacing keep_window_open() with cout + getchar() - see ch02-01's hello_world_practice.cpp and github issue #3 for why
+cout << "\n Press <Enter> to continue... \n";
+getchar();
 
 // return a successfull exit
 return 0;
