@@ -1,4 +1,4 @@
-#include "std_lib_facilities.h"
+#include "../res-files/std_lib_facilities.h"
 
 // tried including conio.h to use getch() before I'd learnt about it's MS-DOS specificity and non-standard-inclusion - see more comments below
 //#include <conio.h>
