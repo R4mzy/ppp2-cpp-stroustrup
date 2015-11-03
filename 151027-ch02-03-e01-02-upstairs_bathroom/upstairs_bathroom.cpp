@@ -1,4 +1,4 @@
-#include "std_lib_facilities.h"
+#include "../res-files/std_lib_facilities.h"
 // this application is meant to output instructions to the console to explain, in tedious detail, how to get to the upstairs bathroom.
 // it will first give a brief description of the house being navigated
 

@@ -9,10 +9,10 @@
 // test06 - using a single quote ' rather than double " to define the string
 // test07 - not terminating the hellow world string with a semi-colon
 
-#include "std_lib_facilities.h"
+#include "../res-files/std_lib_facilities.h"
 
 int main() {
-	cout << "Hello, World!\n"
+	cout << "Hello, World!\n";
 	keep_window_open();
 	return 0;
 }

@@ -10,14 +10,16 @@
 // tried calling just a normal #include std_lib_facilities.h but get what seem to be header reference errors. Need to figure out how to install
 // C++ headers to the system - at least I think that's what I need to do.
 // 
-// figured what I was doing to compile incorrectly - need to call g++ command and not gcc - trying again to include just std_lib_facilities.h
+// figured what I was doing to compile incorrectly - need to call g++ command and not gcc - trying again to include just 
+// std_lib_facilities.h
 // rather than all the direct calls above using the correct compile command.
 // final compile command is g++ -o hello_world.out ./hello_world.cpp
 //
-// welp, the C++ standard needs to be specified else errors are returned (compiling on Arch Linux x64). So, final compile command ends up:
+// welp, the C++ standard needs to be specified else errors are returned (compiling on Arch Linux x64). So, final compile
+// command ends up:
 // g++ -std=c++11 -o hello_world.out hello_world.cpp
 
-#include "std_lib_facilities.h"
+#include "../res-files/std_lib_facilities.h"
 
 // rest of app code following includes...
 int main() //C++ programs start by executing the function main
