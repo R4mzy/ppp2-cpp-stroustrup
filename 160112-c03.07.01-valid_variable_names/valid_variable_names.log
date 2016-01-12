@@ -1,0 +1,43 @@
+		first compilation output of bad example
+>g++ --std=c++11 -o valid_variable_names.exe valid_variable_names.cpp
+valid_variable_names.cpp: In function 'int Main()':
+valid_variable_names.cpp:15:2: error: 'STRING' was not declared in this scope
+  STRING s = "Goodbye, cruel world! ";
+  ^
+valid_variable_names.cpp:15:9: error: expected ';' before 's'
+  STRING s = "Goodbye, cruel world! ";
+         ^
+valid_variable_names.cpp:16:2: error: 'cOut' was not declared in this scope
+  cOut << S << '\n';
+  ^
+valid_variable_names.cpp:16:10: error: 'S' was not declared in this scope
+  cOut << S << '\n';
+          ^
+
+		second compilation output, after fix1: "STRING" to "string"
+>g++ --std=c++11 -o valid_variable_names.exe valid_variable_names.cpp
+valid_variable_names.cpp: In function 'int Main()':
+valid_variable_names.cpp:7:2: error: 'cOut' was not declared in this scope
+  cOut << S << '\n';
+  ^
+valid_variable_names.cpp:7:10: error: 'S' was not declared in this scope
+  cOut << S << '\n';
+          ^
+		third compilation output, after fix2: "cOut" to "cout"
+>g++ --std=c++11 -o valid_variable_names.exe valid_variable_names.cpp
+valid_variable_names.cpp: In function 'int Main()':
+valid_variable_names.cpp:7:10: error: 'S' was not declared in this scope
+  cout << S << '\n'; // fix2: "cOut" to "cout"
+          ^
+		fourth compilation output, after fix3: "S" to "s"
+>g++ --std=c++11 -o valid_variable_names.exe valid_variable_names.cpp
+c:/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../libmingw32.a(main.o):(.text.startup+0xa7): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+
+		fifth compilation output, after fix4: "Main()" to "main()"
+no errors
+
+
+So I guess Main() is a (Windows) system function, having something to do with the MinGW compiler... or something... my Googling 
+has yielded unclear results but that seems to be the direction. Perhaps the MinGW calls a Windows library/header which has a 
+Main() funtion or something.
