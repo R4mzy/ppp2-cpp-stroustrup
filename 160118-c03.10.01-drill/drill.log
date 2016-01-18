@@ -1,0 +1,93 @@
+// compilation one
+// fixed the "stray" errors by clearing whitespace in section // one and re-adding.
+// that section was initially copied in from the ebook, in Windows.
+$ g++ --std=c++11 -o drill.out drill.cpp 
+drill.cpp:6:2: error: stray ‘\302’ in program
+  string first_name;              // first_name is a variable of type string
+  ^
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:6:2: error: stray ‘\302’ in program
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:6:2: error: stray ‘\302’ in program
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:6:2: error: stray ‘\302’ in program
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:6:2: error: stray ‘\302’ in program
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:6:2: error: stray ‘\302’ in program
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:6:2: error: stray ‘\302’ in program
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:6:2: error: stray ‘\302’ in program
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:6:2: error: stray ‘\302’ in program
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:6:2: error: stray ‘\302’ in program
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:6:2: error: stray ‘\302’ in program
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:6:2: error: stray ‘\302’ in program
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:6:2: error: stray ‘\302’ in program
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:6:2: error: stray ‘\302’ in program
+drill.cpp:6:2: error: stray ‘\240’ in program
+drill.cpp:7:2: error: stray ‘\302’ in program
+  cin >> first_name;             // read characters into first_name
+  ^
+drill.cpp:7:2: error: stray ‘\240’ in program
+drill.cpp:7:2: error: stray ‘\302’ in program
+drill.cpp:7:2: error: stray ‘\240’ in program
+drill.cpp:7:2: error: stray ‘\302’ in program
+drill.cpp:7:2: error: stray ‘\240’ in program
+drill.cpp:7:2: error: stray ‘\302’ in program
+drill.cpp:7:2: error: stray ‘\240’ in program
+drill.cpp:7:2: error: stray ‘\302’ in program
+drill.cpp:7:2: error: stray ‘\240’ in program
+drill.cpp:7:2: error: stray ‘\302’ in program
+drill.cpp:7:2: error: stray ‘\240’ in program
+drill.cpp:7:2: error: stray ‘\302’ in program
+drill.cpp:7:2: error: stray ‘\240’ in program
+drill.cpp:7:2: error: stray ‘\302’ in program
+drill.cpp:7:2: error: stray ‘\240’ in program
+drill.cpp:7:2: error: stray ‘\302’ in program
+drill.cpp:7:2: error: stray ‘\240’ in program
+drill.cpp:7:2: error: stray ‘\302’ in program
+drill.cpp:7:2: error: stray ‘\240’ in program
+drill.cpp:7:2: error: stray ‘\302’ in program
+drill.cpp:7:2: error: stray ‘\240’ in program
+drill.cpp:7:2: error: stray ‘\302’ in program
+drill.cpp:7:2: error: stray ‘\240’ in program
+drill.cpp:7:2: error: stray ‘\302’ in program
+drill.cpp:7:2: error: stray ‘\240’ in program
+drill.cpp: In function ‘int main()’:
+drill.cpp:55:4: error: expected primary-expression before ‘<<’ token
+    << " What you taught me helped me change my life and things have really turned around for us, so thank you.\n";
+    ^
+drill.cpp:59:3: error: expected primary-expression before ‘<<’ token
+   << '\n' << '\n' << "Lea";
+   ^
+
+// compilation two
+// seems there were semi-colons on the lines before the indicated ones, which wouldn't work when you're continuing the cout operation from
+// said line above.
+$ g++ --std=c++11 -o drill.out drill.cpp 
+drill.cpp: In function ‘int main()’:
+drill.cpp:55:4: error: expected primary-expression before ‘<<’ token
+    << " What you taught me helped me change my life and things have really turned around for us, so thank you.\n";
+    ^
+drill.cpp:59:3: error: expected primary-expression before ‘<<’ token
+   << '\n' << '\n' << "Lea";
+   ^
+
+
+// run one
+// worked great - all there is to fix is spacing of the last line so it is tabbed and the prompt appears on the next line not the same one.
+// i'll also edit the age prompt to make it clearer that it is asking for the age of person friend_name.
+
+// run two
+// woops, not the age of friend_name, the age of person first_name...
+// also i'm re-spacing the last third and second paragraphs to follow each other directly. Seems smoother.
+
+// run three
+// perfect. well except for now input validation and that kind of stuff but if you play nice it's perfect.
