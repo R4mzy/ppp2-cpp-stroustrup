@@ -1,0 +1,46 @@
+// compile one
+$ g++ --std=c++11 -o q03_illegal_variables.out q03_illegal_variables.cpp 
+q03_illegal_variables.cpp:10:9: error: stray ‘#’ in program
+  string #tag = "hashy";
+         ^
+q03_illegal_variables.cpp:11:9: error: stray ‘@’ in program
+  int and@123 = 123;
+         ^
+q03_illegal_variables.cpp: In function ‘int main()’:
+q03_illegal_variables.cpp:8:9: error: expected unqualified-id before ‘if’
+  double if = 4.2;
+         ^
+q03_illegal_variables.cpp:9:11: error: expected initializer before ‘char’
+  char one char = 'a';
+           ^
+q03_illegal_variables.cpp:11:10: error: expected unqualified-id before numeric constant
+  int and@123 = 123;
+          ^
+q03_illegal_variables.cpp:11:10: error: expected initializer before numeric constant
+q03_illegal_variables.cpp:12:9: error: expected unqualified-id before numeric constant
+  double 2digi = 2.1;
+         ^
+[r4mzy@ARCH42 160121-c03.13.02-q03_illegal_variables]$ vim q03_illegal_variables.cpp 
+
+
+// compile two
+// changed the and@123 name to and!123 to see what difference another symbol would make
+[r4mzy@ARCH42 160121-c03.13.02-q03_illegal_variables]$ g++ --std=c++11 -o q03_illegal_variables.out q03_illegal_variables.cpp 
+q03_illegal_variables.cpp:10:9: error: stray ‘#’ in program
+  string #tag = "hashy";
+         ^
+q03_illegal_variables.cpp: In function ‘int main()’:
+q03_illegal_variables.cpp:8:9: error: expected unqualified-id before ‘if’
+  double if = 4.2;
+         ^
+q03_illegal_variables.cpp:9:11: error: expected initializer before ‘char’
+  char one char = 'a';
+           ^
+q03_illegal_variables.cpp:11:9: error: expected unqualified-id before ‘!’ token
+  int and!123 = 123;
+         ^
+q03_illegal_variables.cpp:11:9: error: expected initializer before ‘!’ token
+q03_illegal_variables.cpp:12:9: error: expected unqualified-id before numeric constant
+  double 2digi = 2.1;
+         ^
+
