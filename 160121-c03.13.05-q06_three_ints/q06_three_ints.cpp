@@ -15,7 +15,7 @@ int main() {
 	int third = 0;
 		
 	
-	// if the user is trolling
+	// if all the same
 	if (num1 == num2) {
 		if (num2 == num3) {
 			first = num1;
@@ -28,8 +28,6 @@ int main() {
 	while (num1 >= num2) {
 		if (num1 >
 	}
-
-	cout << "\nAlright here you go:\n";
 
 */	
 
