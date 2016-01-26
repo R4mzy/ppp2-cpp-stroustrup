@@ -4,34 +4,37 @@
 
 int main() {
 	cout << "\nHey let me sort three integer numbers for you. Enter them now.\n";
-	int num1;
-	int num2;
-	int num3;
-
-	cin >> num1 >> num2 >> num3;
 
 	int first = 0;
 	int second = 0;
 	int third = 0;
-		
-	
-	// if all the same
-	if (num1 == num2) {
-		if (num2 == num3) {
-			first = num1;
-			second = num2;
-			third = num3;
+
+	int current;
+	while (cin >> current) {
+		if (current > third) {
+			// yes - evaluate next level
+			if (current > second) {
+				//yes - evaluate next level
+				if (current > first) {
+					// yes - last level so assign values
+					third = second;
+					second = first;
+					first = current;
+				}
+				// no - assign values
+				if (current <= first) {
+				third = second;
+				second = current;
+				}
+			}
+			// no - assign values
+			if (current <= second) {
+			third = current;
+			}
 		}
+		// if current !> third then current = 0 or is not an integer and we have nothing to do
 	}
-
-/*
-	while (num1 >= num2) {
-		if (num1 >
-	}
-
-*/	
-
+		
 	cout << "\nAlright, here you are: " << first << ", " << second << ", " << third << '\n';
 	return 0;
-
 }
