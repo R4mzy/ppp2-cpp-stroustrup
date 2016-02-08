@@ -45,7 +45,7 @@ int main() {
 		++loops;
 		// Once the while loop has run three times, therefore three values parsed, end the loop/program and output the results.
 		if (loops == 3) {
-			cout << "\nAlright, here you are: " << first << ", " << second << ", " << third << '\n';
+			cout << "\nAlright, here you are: " << third << ", " << second << ", " << first << '\n';
 			return 0;
 		}
 	}
