@@ -1,4 +1,6 @@
 #include "../res-files/std_lib_facilities.h"
+#include <functional>
+// see comment further on for info on <functional>
 
 /*
 	Write a program that takes an operation followed by two operands and outputs the result. For example:
@@ -22,15 +24,24 @@ int main() {
 	cin >> strGivenSymbol >> dblNumberOne >> dblNumberTwo;
 	// determine what to do, based on the operator supplied, and store that in another variable
 	// this would be much neater if I could use OR's
-	string charActualSymbol;
+	
+	// I struggled to find some way to store an operand in a variable, and didn't want to type out a full if/then for each operand possibility.
+	// duckduckgo got me to this so I'm trying it (the answer by ildjarn): https://stackoverflow.com/questions/10424119/storing-basic-arithmetic-operators-in-variables
+	// I have included <functional> above for this reason.
+		
+	// string charActualSymbol;
 	// determine addition
 	if (strGivenSymbol == "+") {
-		charActualSymbol = '+';
+		// charActualSymbol = '+';
+		//std::function<double(double, double)> 
+		charActualSymbol = std::plus<double>();
 	}
 	if (strGivenSymbol == "plus") {
-		charActualSymbol = '+';
+		// charActualSymbol = '+';
+		//std::function<double(double, double)> 
+		charActualSymbol = std::plus<double>();
 	}
-	// determine subtraction
+/*	// determine subtraction
 	if (strGivenSymbol == "-") {
 		charActualSymbol = '-';
 	}
@@ -51,10 +62,12 @@ int main() {
 	if (strGivenSymbol == "div") {
 		charActualSymbol = '/';
 	}
-	
+*/	
 	// finally, perform the calculation and store the answer
-	double dblAnswer;
-	dblAnswer = dblNumberOne charActualSymbol dblNumberTwo;
+	double dblAnswer = charActualSymbol(dblNumberOne, dblNumberTwo);
+	// dblAnswer = dblNumberOne charActualSymbol dblNumberTwo;
+	
+	
 	
 	// display the calculation and answer
 	cout << "Calculating: " << dblNumberOne << " " << strGivenSymbol << " " << dblNumberTwo << " = " << dblAnswer << '\n'; 
