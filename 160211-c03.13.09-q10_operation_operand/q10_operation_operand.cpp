@@ -52,7 +52,8 @@ int main() {
 	}
 	
 	// finally, perform the calculation and store the answer
-	double dblAnswer = (dblNumberOne charActualSymbol dblNumberTwo);
+	double dblAnswer;
+	dblAnswer = dblNumberOne charActualSymbol dblNumberTwo;
 	
 	// display the calculation and answer
 	cout << "Calculating: " << dblNumberOne << " " << strGivenSymbol << " " << dblNumberTwo << " = " << dblAnswer << '\n'; 
