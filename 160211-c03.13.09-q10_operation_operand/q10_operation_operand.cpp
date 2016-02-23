@@ -1,5 +1,5 @@
 #include "../res-files/std_lib_facilities.h"
-#include <functional>
+// #include <functional>
 // see comment further on for info on <functional>
 
 /*
@@ -28,47 +28,44 @@ int main() {
 	// I struggled to find some way to store an operand in a variable, and didn't want to type out a full if/then for each operand possibility.
 	// duckduckgo got me to this so I'm trying it (the answer by ildjarn): https://stackoverflow.com/questions/10424119/storing-basic-arithmetic-operators-in-variables
 	// I have included <functional> above for this reason.
-		
-	// string charActualSymbol;
+	// okay this approach didn't work, I get compiler errors which I think indicate declaring the operator variable with the std::function/std::plus method isn't working. I don't know. I'll just if it all out instead.
+	
+	// variable to store the eventual answer
+	double dblAnswer = 0;
+	
 	// determine addition
 	if (strGivenSymbol == "+") {
-		// charActualSymbol = '+';
-		//std::function<double(double, double)> 
-		charActualSymbol = std::plus<double>();
+		dblAnswer = dblNumberOne + dblNumberTwo;
 	}
 	if (strGivenSymbol == "plus") {
-		// charActualSymbol = '+';
-		//std::function<double(double, double)> 
-		charActualSymbol = std::plus<double>();
+		dblAnswer = dblNumberOne + dblNumberTwo;
+		strGivenSymbol = "+";
 	}
-/*	// determine subtraction
+	// determine subtraction
 	if (strGivenSymbol == "-") {
-		charActualSymbol = '-';
+		dblAnswer = dblNumberOne - dblNumberTwo;
 	}
 	if (strGivenSymbol == "minus") {
-		charActualSymbol = '-';
+		dblAnswer = dblNumberOne + dblNumberTwo;
+		strGivenSymbol = "-";
 	}
 	// determine multiplication
 	if (strGivenSymbol == "*") {
-		charActualSymbol = '*';
+		dblAnswer = dblNumberOne * dblNumberTwo;
 	}
 	if (strGivenSymbol == "mul") {
-		charActualSymbol = '*';
+		dblAnswer = dblNumberOne * dblNumberTwo;
+		strGivenSymbol = "*";
 	}
 	// determine division
 	if (strGivenSymbol == "/") {
-		charActualSymbol = '/';
+		dblAnswer = dblNumberOne / dblNumberTwo;
 	}
 	if (strGivenSymbol == "div") {
-		charActualSymbol = '/';
+		dblAnswer = dblNumberOne / dblNumberTwo;
+		strGivenSymbol = "/";
 	}
-*/	
-	// finally, perform the calculation and store the answer
-	double dblAnswer = charActualSymbol(dblNumberOne, dblNumberTwo);
-	// dblAnswer = dblNumberOne charActualSymbol dblNumberTwo;
-	
-	
-	
+
 	// display the calculation and answer
 	cout << "Calculating: " << dblNumberOne << " " << strGivenSymbol << " " << dblNumberTwo << " = " << dblAnswer << '\n'; 
 }
