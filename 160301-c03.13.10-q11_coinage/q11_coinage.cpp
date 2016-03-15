@@ -29,65 +29,65 @@ int main() {
 	double pennies;
 	cout << "\nHow many pennies you got?\n";
 	cin >> pennies;
-	string pennies_grammar = pennies + " pennies";
+	string pennies_grammar = " pennies";
 	if (pennies == 1) {
-		pennies_grammar = "1 penny";
+		pennies_grammar = " penny";
 	}
 	
 	// nickels (5-cent)
 	double nickels;
 	cout << "\nAnd how many nickels?\n";
 	cin >> nickels;
-	string nickels_grammar = nickels + " nickels";
+	string nickels_grammar = " nickels";
 	if (nickels == 1) {
-		nickels_grammar = "1 nickel";
+		nickels_grammar = " nickel";
 	}
 	
 	// dimes (10-cent)
 	double dimes;
 	cout << "\nYeah and dimes?\n";
 	cin >> dimes;
-	string dimes_grammar = dimes + " dimes";
+	string dimes_grammar = " dimes";
 	if (dimes == 1) {
-		dimes_grammar = "1 dime";
+		dimes_grammar = " dime";
 	}
 	
 	// quarters (25-cent)
 	double quarters;
 	cout << "\nGive me the one-fourths, the quarters.\n";
 	cin >> quarters;
-	string quarters_grammar = quarters + " quarters";
+	string quarters_grammar = " quarters";
 	if (quarters == 1) {
-		quarters_grammar = "1 quarter";
+		quarters_grammar = " quarter";
 	}
 	
 	// half dollars (50-cent)
 	double half_dollars;
 	cout << "\nWill you meet me half-dollar way?\n";
 	cin >> half_dollars;
-	string half_dollars_grammar = half_dollars + " half-dollars";
+	string half_dollars_grammar = " half-dollars";
 	if (half_dollars == 1) {
-		half_dollars_grammar = "1 half-dollar";
+		half_dollars_grammar = " half-dollar";
 	}
 	
 	// one-dollars (100-cent)
 	double one_dollars;
 	cout << "\nLast and largest, one-dollars?\n";
 	cin >> one_dollars;
-	string one_dollars_grammar = one_dollars + " dollars";
+	string one_dollars_grammar = + " dollars";
 	if (one_dollars == 1) {
-		one_dollars_grammar = "1 one-dollar";
+		one_dollars_grammar = " one-dollar";
 	}
 	
 	// print out the users coins
-	cout << "\n\nOkay so we got, uhh, " << pennies_grammar << ".\n"
-		<< "And then " << nickels_grammar << " and " << dimes_grammar << ".\n"
-		<< "Plus, like " << quarters_grammar << ".\n"
-		<< "Then, let's see, " << half_dollars_grammar << ".\n"
-		<< "Lastly, " << one_dollars_grammar << ".\n";
+	cout << "\n\nOkay so we got, uhh, " << pennies << pennies_grammar << ".\n"
+		<< "And then " << nickels << nickels_grammar << " and " << dimes << dimes_grammar << ".\n"
+		<< "Plus, like " << quarters << quarters_grammar << ".\n"
+		<< "Then, let's see, " << half_dollars << half_dollars_grammar << ".\n"
+		<< "Lastly, " << one_dollars << one_dollars_grammar << ".\n";
 	
 	// print out the total cents balance
 	double total_cents = (pennies) + (nickels * 5) + (dimes * 10) + (quarters * 25) + (half_dollars * 50) + (one_dollars * 100);
-	double total_dollars = total_cents / 100;
+	double total_dollars = total_cents / 100.0;
 	cout << "\n So that gives us a total of " << total_cents << " cents. Better known as $" << total_dollars << ". Sweet.";
 }
